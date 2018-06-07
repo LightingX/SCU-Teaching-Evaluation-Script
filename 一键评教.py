@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import getpass
 import random
-choices = ['Very Good!', 'Excellent!', '666666666']
+choices = ['', 'Very Good!', 'Excellent!', '666666666']
 
 postUrl = 'http://zhjw.scu.edu.cn/loginAction.do'
 id = input('请输入你的学号: ')
