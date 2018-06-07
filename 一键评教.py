@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import getpass
 import random
-
+choices = ['Very Good!', 'Excellent!', '666666666']
 
 postUrl = 'http://zhjw.scu.edu.cn/loginAction.do'
 id = input('请输入你的学号: ')
@@ -36,12 +36,7 @@ for tr in listSoup.find_all('tr', attrs = {'class' : 'odd'}):
     courseName = paramList[4]
     pgnr = paramList[5]
     choice = random.randint(1,3)
-    if choice == 1:
-        zgpj = 'Very Good!'
-    elif choice == 2:
-        zgpj = 'Excellent!'
-    elif choice == 3:
-        zgpj = '666666666'
+    zgpj = choices[choice]
     judgePageUrl = 'http://zhjw.scu.edu.cn/jxpgXsAction.do'
     judgePageParams = {
         'wjbm' : wjbm,
